@@ -1,0 +1,277 @@
+uration-->
+<host>127.0.0.1</host> <!--utilisation de 127.0.0.1 au lieu de localhost pour éviter les problèmes de DNS-->
+</port>3306</post>
+<database>LaBellaForchetta</database>
+<faire une page vitrine pour mon restaurant italien La Bella Forchetta>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella Forchetta - Restaurant Italien</title>
+    <Link rel="stylesheet" href="style.css">
+        <Link href=" https://fronts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+            <!-- ====== SUITE: Sections pour le resto italien ====== -->
+<style>
+  /* Styles de base (insère-les dans <head> si tu préfères) */
+  :root{
+    --accent:#b22222; /* rouge tomate */
+    --accent-dark:#8b1a1a;
+    --muted:#666;
+    --bg:#fffaf6;
+    --card:#fff;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  .container{max-width:1100px;margin:0 auto;padding:1rem;}
+  .hero{
+    background: linear-gradient(180deg, rgba(178,34,34,0.08), rgba(0,0,0,0.02)), url('images/hero-pizza.jpg') center/cover no-repeat;
+    color:#222;padding:4rem 1rem;border-radius:8px;margin-bottom:1.5rem;
+    display:flex;align-items:center;gap:2rem;
+  }
+  .hero .copy{max-width:640px;}
+  .kicker{color:var(--accent);font-weight:700;letter-spacing:1px;margin-bottom:.5rem;}
+  h1{font-size:2.1rem;margin:.2rem 0;}
+  p.lead{color:var(--muted);margin:.6rem 0 1rem;}
+  .cta{background:var(--accent);color:white;padding:.6rem 1rem;border-radius:6px;text-decoration:none;font-weight:600;}
+  .two-cols{display:grid;grid-template-columns:1fr 380px;gap:1.5rem;align-items:start;}
+  @media (max-width:880px){.two-cols{grid-template-columns:1fr}.hero{flex-direction:column;padding:2rem}}
+  .card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+  /* About */
+  .about{display:flex;gap:1rem;align-items:center;margin-bottom:1.5rem;}
+  .about img{width:220px;border-radius:8px;object-fit:cover;height:150px}
+  /* Menu */
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0;}
+  @media (max-width:880px){.menu-grid{grid-template-columns:1fr}}
+  .dish{padding:.8rem;border-radius:8px;background:linear-gradient(180deg,#fff,#fffaf0);border:1px solid #f0e6e6;}
+  .dish h4{margin:0 0 .3rem}
+  .price{float:right;font-weight:700;color:var(--accent)}
+  /* Gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:1rem 0;}
+  @media (max-width:880px){.gallery{grid-template-columns:repeat(2,1fr)}}
+  .gallery img{width:100%;height:120px;object-fit:cover;border-radius:6px}
+  /* Reservation form */
+  form label{display:block;margin:.45rem 0 .15rem;font-size:.9rem;color:var(--muted)}
+  input[type="text"], input[type="email"], input[type="date"], input[type="time"], select, textarea{
+    width:100%;padding:.6rem;border-radius:6px;border:1px solid #e0d6d6;background:transparent;
+  }
+  .row{display:flex;gap:.6rem}
+  .row .col{flex:1}
+  .btn{background:var(--accent);color:white;padding:.6rem 1rem;border-radius:6px;border:0;cursor:pointer;font-weight:700}
+  .note{font-size:.9rem;color:var(--muted);margin-top:.5rem}
+  footer{margin-top:2rem;padding:1rem 0;color:#333;border-top:1px solid #eee;text-align:center}
+  .muted{color:var(--muted)}
+  .success{background:#e6ffef;border-left:4px solid #2e8b57;padding:.6rem;border-radius:6px;margin-top:.6rem}
+</style>
+
+<section class="container">
+  <!-- HERO -->
+  <div class="hero card">
+    <div class="copy">
+      <div class="kicker">La Bella Forchetta</div>
+      <h1>Benvenuto — Authenticità & saveurs d'Italie</h1>
+      <p class="lead">Pâtes faites maison, pizzas cuites au feu de bois et desserts familiaux. Ambiance chaleureuse, ingrédients sélectionnés et recettes transmises de génération en génération.</p>
+      <a href="#reservation" class="cta">Réserver une table</a>
+      <p class="note">Ouvert du mardi au dimanche — Service dîner dès 19h</p>
+    </div>
+    <div class="card" style="width:320px;text-align:center;">
+      <h3>Offre du jour</h3>
+      <p class="muted">Menu 3 plats à 24€ — entrée, plat, dessert</p>
+      <img src="C:\Users\alex2\Downloads\images (4).jpeg" alt="Plat du jour" style="width:100%;border-radius:6px;margin-top:.6rem;height:160px;object-fit:cover;">
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="two-cols">
+    <main>
+      <!-- A PROPOS -->
+      <section class="card about" id="about">
+        <img src="C:\Users\alex2\Downloads\téléchargé (1).jpeg" alt="Le chef">
+        <div>
+          <h3>À propos</h3>
+          <p class="muted">Notre chef Carlo Cracco apporte la tradition napolitaine directement dans votre assiette. Nous utilisons des tomates San Marzano, de la farine italienne et de l'huile d'olive extra-vierge pour garantir des saveurs authentiques.</p>
+        </div>
+      </section>
+
+      <!-- MENU -->
+      <section class="card" id="menu">
+        <h3>Carte</h3>
+        <div class="menu-grid">
+          <div class="dish">
+            <h4>Margherita <span class="price">9€</span></h4>
+            <p class="muted">Tomate San Marzano, mozzarella, basilic frais.</p>
+          </div>
+          <div class="dish">
+            <h4>Tagliatelle al Ragù <span class="price">12€</span></h4>
+            <p class="muted">Pâtes fraîches maison, ragù de bœuf mijoté 6h.</p>
+          </div>
+          <div class="dish">
+            <h4>Tiramisu <span class="price">6€</span></h4>
+            <p class="muted">Mascarpone, café du matin, cacao.</p>
+          </div>
+          <div class="dish">
+            <h4>Prosciutto e Rucola <span class="price">11€</span></h4>
+            <p class="muted">Jambon de Parme, roquette, copeaux de parmigiano.</p>
+          </div>
+          <div class="dish">
+            <h4>Lasagna della Casa <span class="price">13€</span></h4>
+            <p class="muted">Recette familiale, béchamel légère.</p>
+          </div>
+          <div class="dish">
+            <h4>Gelato Artigianale <span class="price">5€</span></h4>
+            <p class="muted">Parfum vanille, pistache ou chocolat.</p>
+          </div>
+        </div>
+
+        <p class="muted">Allergènes & options végétariennes disponibles — demandez au serveur.</p>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="card" id="gallery">
+        <h3>Galerie</h3>
+        <div class="gallery">
+          <img src="C:\Users\alex2\Downloads\Four-a-pizza-au-feu-de-bois.jpg" alt="Pizza au four">
+          <img src="C:\Users\alex2\OneDrive\Documents\SEO\ChatGPT Image 6 oct. 2025, 15_20_29.png" alt="Intérieur du restaurant">
+          <img src="C:\Users\alex2\Downloads\images (3).jpeg" alt="Pâtes fraîches">
+          <img src="C:\Users\alex2\Downloads\téléchargé.jpeg" alt="Dessert maison">
+        </div>
+      </section>
+    </main>
+
+    <!-- SIDEBAR : Réservation -->
+    <aside class="card" style="position:sticky;top:1.2rem;height:fit-content;">
+      <h3 id="reservation">Réserver une table</h3>
+
+      <form id="resForm" class="form">
+        <label for="name">Nom</label>
+        <input id="name" name="name" type="text" placeholder="Ton nom" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="ex: toto@mail.com" required>
+
+        <div class="row">
+          <div class="col">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+          <div class="col">
+            <label for="time">Heure</label>
+            <input id="time" name="time" type="time" required>
+          </div>
+        </div>
+
+        <label for="guests">Nombre de personnes</label>
+        <select id="guests" name="guests" required>
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5+</option>
+        </select>
+
+        <label for="notes">Remarques (allergies, fête...)</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Ex: anniversaire, sans gluten..."></textarea>
+
+        <div style="margin-top:.8rem;">
+          <button type="submit" class="btn">Envoyer la réservation</button>
+        </div>
+
+        <div id="resMessage" aria-live="polite"></div>
+        <p class="note">Nous confirmons votre réservation par email ou téléphone.</p>
+      </form>
+
+      <div style="margin-top:1rem">
+        <strong>Horaires</strong>
+        <p class="muted">Mardi–Dimanche : 19:00 – 23:00<br>Lundi : fermé</p>
+
+        <strong>Téléphone</strong>
+        <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p><strong>Ristorante Italiano</strong> — 12 Rue de la Pasta, 75000 Paris • <span class="muted">© <span id="year"></span></span></p>
+      <p class="muted">Suivez-nous : [Instagram] [Facebook]</p>
+    </div>
+  </footer>
+</section>
+
+<script>
+  // JS: validation simple + feedback (remplace par envoi AJAX réel si nécessaire)
+  document.getElementById('resForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const guests = document.getElementById('guests').value;
+    const msgEl = document.getElementById('resMessage');
+
+    // Vérifs basiques
+    if (!name || !email || !date || !time) {
+      msgEl.innerHTML = '<div class="success" style="background:#fff1f1;border-left:4px solid var(--accent);">Merci de remplir tous les champs requis.</div>';
+      return;
+    }
+
+    // Simuler envoi
+    msgEl.innerHTML = '<div class="success">Merci ' + name + ' — votre demande pour le ' + date + ' à ' + time + ' (' + guests + ' pers.) a bien été reçue. Nous vous contacterons bientôt pour confirmer.</div>';
+    // reset (optionnel)
+    this.reset();
+  });
+
+  // année dynamique
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<!-- ====== FIN SUITE ====== -->
+
+<section id="histoire" style="background:#faf7f2; padding:60px 20px; font-family:'Georgia',serif; color:#333;">
+  <div style="max-width:900px; margin:auto;">
+    <h2 style="text-align:center; font-size:2.5em; color:#b22222; margin-bottom:30px;">Notre Histoire</h2>
+
+    <p style="font-size:1.2em; line-height:1.8;">
+      L’histoire du <strong>Ristorante Italiano</strong> commence bien loin d’ici, au cœur des collines toscanes, dans un petit village baigné par le soleil et le parfum des oliviers. 
+      C’est là que <strong>Giovanni Rossi</strong>, fondateur du restaurant, a grandi dans une famille où la cuisine n’était pas qu’un simple repas — c’était une véritable célébration de la vie. 
+      Chaque dimanche, la maison se remplissait des rires, du son des verres qui s’entrechoquent et des arômes de sauce tomate mijotant lentement sur le feu.
+    </p>
+
+    <p style="font-size:1.2em; line-height:1.8;">
+      Inspiré par les recettes de sa nonna, Giovanni décide très jeune de suivre la voie de la gastronomie. 
+      Après des années passées à perfectionner son art entre Florence et Naples, il s’installe en France avec un rêve simple mais ambitieux : 
+      <em>faire découvrir la vraie cuisine italienne, authentique et généreuse</em>. 
+      Il ouvre alors les portes du <strong>Ristorante Italiano</strong>, un lieu où chaque plat raconte une histoire, 
+      où la simplicité devient élégance et où la passion se goûte à chaque bouchée.
+    </p>
+
+    <p style="font-size:1.2em; line-height:1.8;">
+      Au fil des années, le restaurant est devenu une adresse incontournable pour les amoureux de l’Italie. 
+      Les ingrédients sont soigneusement sélectionnés : tomates San Marzano, mozzarella di bufala, farine napolitaine et huile d’olive extra vierge. 
+      La pâte à pizza est pétrie à la main chaque matin, les pâtes fraîches sont préparées sur place, 
+      et les desserts, du tiramisu au panna cotta, sont faits maison avec amour et respect de la tradition.
+    </p>
+
+    <p style="font-size:1.2em; line-height:1.8;">
+      Mais plus qu’un restaurant, <strong>Ristorante Italiano</strong> est une histoire de famille. 
+      Giovanni a transmis son savoir et sa passion à sa fille <strong>Isabella</strong>, aujourd’hui cheffe de cuisine. 
+      Ensemble, ils perpétuent l’héritage familial, tout en y ajoutant une touche de modernité et de créativité. 
+      Leur philosophie : rester fidèles aux racines italiennes tout en s’ouvrant aux saveurs du monde.
+    </p>
+
+    <blockquote style="border-left:4px solid #b22222; padding-left:15px; font-style:italic; color:#555; margin:30px 0;">
+      « Cuisiner, c’est offrir un morceau de soi. Chaque plat que nous servons est une invitation à voyager en Italie, sans quitter la table. »
+      <br>— <strong>Giovanni Rossi</strong>
+    </blockquote>
+
+    <p style="font-size:1.2em; line-height:1.8;">
+      Aujourd’hui encore, chaque repas au <strong>Ristorante Italiano</strong> est une expérience unique. 
+      Sous les lumières tamisées, entouré de musique italienne et de senteurs méditerranéennes, 
+      on se sent transporté à Florence, à Rome ou à Naples, juste le temps d’un dîner.
+      <br><br>
+      <strong>Bienvenue dans notre famille, bienvenue dans notre histoire.</strong> 🇮🇹
+    </p>
+
+    <div style="text-align:center; margin-top:40px;">
+      <img src="C:\Users\alex2\Downloads\ChatGPT Image 15 oct. 2025, 10_36_51.png" alt="Intérieur du restaurant italien" style="max-width:100%; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);">
+    </div>
+  </div>
+</section>
